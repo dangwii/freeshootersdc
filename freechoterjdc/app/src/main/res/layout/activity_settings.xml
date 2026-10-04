@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Layout para la sección de Ajustes del Juego.
+-->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1A1A1A"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/tvSettingsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="AJUSTES DEL JUEGO"
+        android:textColor="#FFD700"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Sección para re-escribir el nombre o resetear datos -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSettingsTitle">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Configuraciones de perfil:"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Botón para borrar/resetear todas las puntuaciones guardadas -->
+        <Button
+            android:id="@+id/btnResetScores"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#FF5252"
+            android:text="RESETEAR PUNTUACIONES"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            app:cornerRadius="8dp" />
+
+        <!-- Botón para cambiar el nombre del usuario (vuelve a registro o borra preferencia) -->
+        <Button
+            android:id="@+id/btnChangeName"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="CAMBIAR NOMBRE DE JUGADOR"
+            android:textColor="#FFD700"
+            app:cornerRadius="8dp"
+            app:strokeColor="#FFD700" />
+    </LinearLayout>
+
+    <!-- Botón para volver al menú principal -->
+    <Button
+        android:id="@+id/btnBackFromSettings"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="#FFD700"
+        android:text="VOLVER AL MENÚ"
+        android:textColor="#1A1A1A"
+        android:textStyle="bold"
+        app:cornerRadius="12dp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

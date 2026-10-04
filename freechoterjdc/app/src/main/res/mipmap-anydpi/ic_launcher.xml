@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Icono Adaptativo Optimizado para que tu imagen cubra el 100% del logo de la APK.
+    Forzamos a que tanto el fondo como el frente usen tu game_logo en pantalla completa.
+-->
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <background android:drawable="@drawable/game_logo" />
+    <foreground android:drawable="@drawable/game_logo" />
+    <monochrome android:drawable="@drawable/game_logo" />
+</adaptive-icon>
